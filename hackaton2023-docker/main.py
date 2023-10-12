@@ -2,6 +2,7 @@
 
 import cv2
 from utils import mask2rle
+import time
 
 # Файлы ввода-вывода
 INPUT_FILE = 'input.webm'
@@ -17,6 +18,8 @@ if cap.isOpened() == False:
 # Подготовить запись файла
 out = open(OUTPUT_FILE, "w")
 out.write("ImageID,EncodedPixels\n")
+
+
 
 # Основной цикл
 while True:
@@ -39,5 +42,6 @@ while True:
 
 # Завершить запись и чтение с файлов
 cap.release()
-out.close()
 
+out.close()
+time.sleep(1000)
