@@ -2,4 +2,4 @@
 *.csv
 *.mp4
 
-./models
+/hackaton2023-docker/models
